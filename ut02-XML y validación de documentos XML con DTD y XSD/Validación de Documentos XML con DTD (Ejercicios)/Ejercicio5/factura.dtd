@@ -1,0 +1,48 @@
+<!ELEMENT factura (fecha, número, fecha_de_vencimiento, cliente, empresa_logística, productos, costes, comentarios)>
+<!-- Estructura fija de la factura -->
+
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT número (#PCDATA)>
+<!ELEMENT fecha_de_vencimiento (#PCDATA)>
+
+<!ELEMENT cliente (nombre, dirección, nif, cp_y_ciudad, email)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dirección (#PCDATA)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT cp_y_ciudad (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT empresa_logística (dirección, cif, cp_y_ciudad, email)>
+<!ELEMENT cif (#PCDATA)>
+
+<!ELEMENT productos (producto+)>
+<!-- Utilizamos '+' porque debe haber al menos un producto -->
+
+<!ELEMENT producto (unidades, precio_unitario, precio_total)>
+<!ATTLIST producto id ID #REQUIRED>
+<!-- Usamos #REQUIRED para que cada producto tenga un identificador único -->
+
+<!ELEMENT unidades (#PCDATA)>
+<!ELEMENT precio_unitario (#PCDATA)>
+<!ATTLIST precio_unitario moneda CDATA #REQUIRED>
+<!-- Especificamos que la moneda es obligatoria -->
+
+<!ELEMENT precio_total (#PCDATA)>
+<!ATTLIST precio_total moneda CDATA #REQUIRED>
+<!-- Especificamos que la moneda es obligatoria -->
+
+<!ELEMENT costes (base_imponible, iva, irpf, total)>
+<!ATTLIST costes moneda CDATA #REQUIRED>
+<!-- Requerimos la moneda para claridad en los cálculos -->
+
+<!ELEMENT base_imponible (#PCDATA)>
+<!ELEMENT iva (#PCDATA)>
+<!ATTLIST iva valor CDATA #REQUIRED>
+<!-- El valor de IVA es obligatorio para transparencia -->
+
+<!ELEMENT irpf (#PCDATA)>
+<!ATTLIST irpf valor CDATA #REQUIRED>
+<!-- El valor de IRPF es obligatorio para transparencia -->
+
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT comentarios (#PCDATA)>

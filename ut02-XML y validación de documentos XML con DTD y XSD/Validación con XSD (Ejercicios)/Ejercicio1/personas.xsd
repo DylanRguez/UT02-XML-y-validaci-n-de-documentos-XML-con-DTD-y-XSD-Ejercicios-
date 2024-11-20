@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Elemento raíz con un máximo de 5 personas y al menos 1 -->
+    <xs:element name="personas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" maxOccurs="5" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Nombre: máximo 30 caracteres -->
+                            <xs:element name="nombre" type="nombreType"/>
+                            <!-- Apellidos: máximo 50 caracteres -->
+                            <xs:element name="apellidos" type="apellidosType"/>
+                            <!-- DNI: exactamente 9 caracteres -->
+                            <xs:element name="dni" type="dniType"/>
+                            <!-- Fecha de nacimiento: formato YYYY-MM-DD, rango entre 1900-01-01 y 2010-01-01 -->
+                            <xs:element name="fecha_nacimiento" type="fechaNacimientoType"/>
+                            <!-- Teléfono: exactamente 9 caracteres -->
+                            <xs:element name="telefono" type="telefonoType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definiciones de tipos -->
+    <xs:simpleType name="nombreType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="apellidosType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="dniType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}[A-Z]"/>
+            <xs:length value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fechaNacimientoType">
+        <xs:restriction base="xs:date">
+            <xs:minInclusive value="1900-01-01"/>
+            <xs:maxInclusive value="2010-01-01"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonoType">
+        <xs:restriction base="xs:string">
+            <xs:length value="9"/>
+            <xs:pattern value="\d{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

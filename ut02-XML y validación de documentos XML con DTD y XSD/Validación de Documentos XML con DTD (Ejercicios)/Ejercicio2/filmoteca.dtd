@@ -1,0 +1,10 @@
+<!ELEMENT filmoteca (película+)> <!-- Se usa "+" porque la filmoteca contiene una o más películas -->
+<!ELEMENT película (titulo, director, año, duración, género, Calificación)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT duración (#PCDATA)>
+<!ATTLIST duración
+    min CDATA #REQUIRED> <!-- Atributo obligatorio para indicar que la duración está en minutos -->
+<!ELEMENT género (#PCDATA)>
+<!ELEMENT Calificación (#PCDATA)>

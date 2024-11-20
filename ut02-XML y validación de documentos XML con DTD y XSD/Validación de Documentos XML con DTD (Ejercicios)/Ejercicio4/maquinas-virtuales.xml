@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<máquinas-virtuales>
+    </máquina id="1">
+        <Nombre>lnd-ubuntu-desktop22.04</Nombre>
+        <CPU (número de núcleos)>1</CPU (número de núcleos)>
+        <RAM unidad="MB">7168</RAM>
+        <Disco tipo="vdi">C:\Users\ASIR\VirtualBox VMs\lnd-ubuntu-desktop22.04\lnd-ubuntu-desktop22-disk002.vdi</Disco>
+        <Tamaño unidad="GB">25.00</Tamaño>
+        <Adaptador>NAT</Adaptador>
+       

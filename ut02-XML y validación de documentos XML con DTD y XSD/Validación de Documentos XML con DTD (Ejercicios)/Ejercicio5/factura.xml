@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura>
+    <fecha>17/04/2024</fecha>
+    <número>2024-0001</número>
+    <fecha_de_vencimiento>17/05/2024</fecha_de_vencimiento>
+    <cliente>
+        <nombre>Orlando Juan Lobán</nombre>
+        <dirección>Avenida Rosario 2, 1A</dirección>
+        <nif>39000001A</nif>
+        <cp_y_ciudad>08001</cp_y_ciudad>
+        <email>info@orlandojuan.es</email>
+    </cliente>
+    <empresa_logística>
+        <dirección>Calle San Juan de la Luz, s/n</dirección>
+        <cif>B12345678</cif>
+        <cp_y_ciudad>28001</cp_y_ciudad>
+        <email>info@empresalogisitasl.com</email>
+    </empresa_logística>
+    <productos>
+        <producto id="1">
+            <unidades>2</unidades>
+            <precio_unitario moneda="EUR">100</precio_unitario>
+            <precio_total moneda="EUR">200.00</precio_total>
+        </producto>
+        <producto id="2">
+            <unidades>4</unidades>
+            <precio_unitario moneda="EUR">150</precio_unitario>
+            <precio_total moneda="EUR">600.00</precio_total>
+        </producto>
+        <producto id="3">
+            <unidades>7</unidades>
+            <precio_unitario moneda="EUR">93</precio_unitario>
+            <precio_total moneda="EUR">651.00</precio_total>
+        </producto>
+    </productos>
+    <costes moneda="EUR">
+        <base_imponible>1451</base_imponible>
+        <iva valor="21%">304.71</iva>
+        <irpf valor="-15%">-217.65</irpf>
+        <total>1538.06</total>
+    </costes>
+    <comentarios>pago por transferencia: ESXXXXXXXXXXXXXXXX9</comentarios>
+</factura>

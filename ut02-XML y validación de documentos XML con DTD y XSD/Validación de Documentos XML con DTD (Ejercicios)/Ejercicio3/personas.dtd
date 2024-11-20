@@ -1,0 +1,12 @@
+<!ELEMENT personas (persona+)> <!-- Se usa "+" porque debe haber una o más personas -->
+<!ELEMENT persona (Nombre, Apellidos, Teléfono, Email, Vía, NombreDeLaVía, Número)>
+<!ATTLIST persona
+    id ID #REQUIRED> <!-- Se usa ID porque es un identificador único para cada persona y es obligatorio -->
+
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Apellidos (#PCDATA)>
+<!ELEMENT Teléfono (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Vía (#PCDATA)>
+<!ELEMENT NombreDeLaVía (#PCDATA)>
+<!ELEMENT Número (#PCDATA)>

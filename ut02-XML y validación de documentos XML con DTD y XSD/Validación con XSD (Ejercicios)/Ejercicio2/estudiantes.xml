@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estudiantes>
+    <estudiante>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez López</apellidos>
+        <matrícula>1234567</matrícula>
+        <fecha_inscripción>2020-09-01</fecha_inscripción>
+        <correo>juan.perez@email.com</correo>
+        <teléfonos>
+            <teléfono>1234567890</teléfono>
+            <teléfono>9876543210</teléfono>
+        </teléfonos>
+        <dirección>
+            <vía>calle</vía>
+            <nombre_vía>Gran Vía</nombre_vía>
+            <código_postal>28001</código_postal>
+        </dirección>
+    </estudiante>
+    <estudiante>
+        <nombre>María</nombre>
+        <apellidos>García Morales</apellidos>
+        <matrícula>2345678</matrícula>
+        <fecha_inscripción>2021-06-15</fecha_inscripción>
+        <correo>maria.garcia@email.com</correo>
+        <teléfonos>
+            <teléfono>1234509876</teléfono>
+            <teléfono>5432167890</teléfono>
+            <teléfono>6789012345</teléfono>
+        </teléfonos>
+        <dirección>
+            <vía>avenida</vía>
+            <nombre_vía>Las Palmas</nombre_vía>
+            <código_postal>28015</código_postal>
+        </dirección>
+    </estudiante>
+    <estudiante>
+        <nombre>Pedro</nombre>
+        <apellidos>Fernández Ruiz</apellidos>
+        <matrícula>3456789</matrícula>
+        <fecha_inscripción>2019-11-20</fecha_inscripción>
+        <correo>pedro.fernandez@email.com</correo>
+        <teléfonos>
+            <teléfono>3456789012</teléfono>
+        </teléfonos>
+        <dirección>
+            <vía>calle</vía>
+            <nombre_vía>Los Olivos</nombre_vía>
+            <código_postal>28020</código_postal>
+        </dirección>
+    </estudiante>
+    <estudiante>
+        <nombre>Ana</nombre>
+        <apellidos>Sánchez Torres</apellidos>
+        <matrícula>4567890</matrícula>
+        <fecha_inscripción>2022-03-10</fecha_inscripción>
+        <correo>ana.sanchez@email.com</correo>
+        <teléfonos>
+            <teléfono>4567890123</teléfono>
+            <teléfono>7890123456</teléfono>
+        </teléfonos>
+        <dirección>
+            <vía>avenida</vía>
+            <nombre_vía>El Prado</nombre_vía>
+            <código_postal>28025</código_postal>
+        </dirección>
+    </estudiante>
+    <estudiante>
+        <nombre>Luis</nombre>
+        <apellidos>Martínez Gómez</apellidos>
+        <matrícula>5678901</matrícula>
+        <fecha_inscripción>2023-01-05</fecha_inscripción>
+        <correo>luis.martinez@email.com</correo>
+        <teléfonos>
+            <teléfono>8901234567</teléfono>
+            <teléfono>2345678901</teléfono>
+            <teléfono>6789012345</teléfono>
+        </teléfonos>
+        <dirección>
+            <vía>calle</vía>
+            <nombre_vía>La Castellana</nombre_vía>
+            <código_postal>28030</código_postal>
+        </dirección>
+    </estudiante>
+</estudiantes>

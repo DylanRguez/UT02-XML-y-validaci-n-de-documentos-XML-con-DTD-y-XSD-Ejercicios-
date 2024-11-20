@@ -1,0 +1,27 @@
+<!ELEMENT máquinas-virtuales (máquina+)>
+<!-- Utilizamos '+' porque una lista de máquinas virtuales debe tener al menos una máquina -->
+
+<!ELEMENT máquina (Nombre, CPU, RAM, Disco, Tamaño, Adaptador)>
+<!-- La secuencia de elementos internos es fija para mantener consistencia -->
+
+<!ATTLIST máquina id ID #REQUIRED>
+<!-- Usamos #REQUIRED porque cada máquina debe tener un identificador único -->
+
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT CPU (#PCDATA)>
+<!-- El número de núcleos es obligatorio, por eso se define como texto simple -->
+
+<!ELEMENT RAM (#PCDATA)>
+<!ATTLIST RAM unidad CDATA #REQUIRED>
+<!-- Usamos #REQUIRED para asegurar que la unidad (MB o GB) siempre se especifique -->
+
+<!ELEMENT Disco (#PCDATA)>
+<!ATTLIST Disco tipo (vdi|vhd|qcow2) #REQUIRED>
+<!-- Usamos un valor enumerado para restringir los tipos de discos a opciones válidas -->
+
+<!ELEMENT Tamaño (#PCDATA)>
+<!ATTLIST Tamaño unidad CDATA #REQUIRED>
+<!-- Requerimos la unidad para evitar ambigüedades en el tamaño especificado -->
+
+<!ELEMENT Adaptador (#PCDATA)>
+<!-- No se especifican atributos aquí, ya que Adaptador tiene valores simples -->
